@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/cliente', [HomeController::class, 'cliente'])->name('cliente.index');
+Route::get('/administrador', [HomeController::class, 'administrador'])->name('administrador.index');
+Route::post('/administrador/investimento/criar', [HomeController::class, 'create'])->name('administrador.create');
+Route::put('/administrador/investimento/update/{id}', [HomeController::class, 'update'])->name('administrador.update');
+Route::get('/administrador/investimento/edit/{id}', [HomeController::class, 'edit'])->name('administrador.edit');
+Route::get('/administrador/investimento/deletar/{id}', [HomeController::class, 'delete'])->name('administrador.delete');
+Route::delete('/administrador/investimento/destroy/{id}', [HomeController::class, 'destroy'])->name('administrador.destroy');
