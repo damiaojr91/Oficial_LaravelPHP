@@ -20,21 +20,21 @@
                             <div class="col-12 my-3">
                                 <h3>Adicionar cliente</h3>
                             </div>
-                            <div class="col-12 col-lg-6">
+                            <div class="col-12 col-lg-4">
                                 <div class="mb-3">
                                     <label for="cliente" class="form-label">Cliente:</label>
                                     <input type="text" class="form-control" id="nome" name="nome">
                                 </div>
                             </div>
 
-                            <div class="col-12 col-lg-6">
+                            <div class="col-12 col-lg-4">
                                 <div class="mb-3">
                                     <label for="email" class="form-label">E-mail:</label>
                                     <input type="text" class="form-control" id="email" name="email">
                                 </div>
                             </div>
 
-                            <div class="col-12 col-lg-6">
+                            <div class="col-12 col-lg-4">
                                 <div class="mb-3">
                                     <label for="investimento" class="form-label">Investimento:</label>
                                     <input type="text" class="form-control" id="investimento" name="investimento">
@@ -64,7 +64,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($investimentos as $investimento)
+                        @foreach ($investimento as $investimento)
                             <tr>
                                 <th scope="row">{{$investimento->nome}}</th>
                                 <td>{{$investimento->email}}</td>

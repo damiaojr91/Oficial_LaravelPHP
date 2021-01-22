@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 use App\Models\Investimento;
 
 class HomeController extends Controller
@@ -14,14 +15,19 @@ class HomeController extends Controller
 
     public function cliente()
     {
-        return view("cliente");
+        $data = Cliente::all();
+        return view('cliente')->with('cliente', $data);
+        //return view(["clientes"=>$data]);
     }
+  
 
     public function administrador()
     {
-        return view("administrador");
+        $data = [
+            'investimento' => Investimento::all(),
+        ];
+
+        return view("administrador",$data);
     }
-
-
 
 }
