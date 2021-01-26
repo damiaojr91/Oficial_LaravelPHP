@@ -43,11 +43,11 @@
     </style>
 
     
-    <!-- Custom styles for this template -->
+    <!-- define layouts da barra de opções -->
     <link href="starter-template.css" rel="stylesheet">
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark -">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="{{ route('index') }}">XasTree Financial</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
             <a class="nav-link" href="{{ route('cliente.index') }}">Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('administrador.index') }}">Administrador</a>
+            <a class="nav-link" href="{{ route('administraCliente') }}">Administrador</a>
           </li>
 
         </ul>

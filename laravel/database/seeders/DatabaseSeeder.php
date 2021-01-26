@@ -11,8 +11,24 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run() //comando para popular a tabela investimento
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\Investimento::create([
+            'id' => '1',
+            'nome' => 'XasTree Invest'
+        ]);
+
+        \App\Models\Investimento::create([
+            'id' => '2',
+            'nome' => 'XasTree Teste'
+        ]);
+
+        \App\Models\Investimento::create([
+            'id' => '3',
+            'nome' => 'XasTree Foca'
+        ]);
+
+
     }
+    
 }

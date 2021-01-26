@@ -23,26 +23,16 @@
                         <th scope="col">Investimento</th>
                     </tr>
                     </thead>
-                    <tbody>
-                        @foreach ($cliente as $data)
+                   <tbody>
+                        @foreach ($data as $teste)
                             <tr>
-                            <th scope="row">{{$data->nome}}</th>
-                                <td>{{$data->sobrenome}}</td>
-                                <td>{{$data->email}}</td>
-                                <td>{{$data->investimento}}</td>
-                            
-                        @endforeach</tr>
-                    </tbody>
-
-                    <!--<tbody>
-                        @foreach ($cliente as $clientes)
-                            <tr>
-                                <td scope="row">{{$clientes->nome}}</td>
-                                <td>{{$clientes->email}}</td>
-                                <td>{{$clientes->investimento}}</td>
+                                <td>{{$teste->nome}}</td>
+                                <td>{{$teste->sobrenome}}</td>
+                                <td>{{$teste->email}}</td>
+                                <td>{{$teste->investimento != NULL ? $teste->investimento->nome : 'Sem investimento'}}</td>
                             </tr>
                         @endforeach
-                    </tbody>-->
+                    </tbody>
 
                 </table>
             </div>
